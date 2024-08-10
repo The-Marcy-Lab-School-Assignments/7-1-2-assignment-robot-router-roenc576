@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BotClassIcon = (bot_class) => {
   switch (bot_class) {
     case "Assault":
@@ -18,39 +20,43 @@ const BotClassIcon = (bot_class) => {
 
 const BotCard = ({ bot }) => {
 
-  const handleClick = () => {
-    console.log(`take me to robot ${robot.id}`);
+  const handleClick = (e) => {
+    console.log(bot);
+    console.log(`take me to robot ${bot.id}`);
+    console.log(e.target);
   }
 
   return (
     <div className="ui card" onClick={handleClick}>
-      <div className="image">
-        <img alt={bot.name} src={bot.avatar_url} />
-      </div>
-      <div className="content">
-        <div className="header">
-          {bot.name} {BotClassIcon(bot.bot_class)}
+      <Link to={`/robots/${bot.id}`}>
+        <div className="image">
+          <img alt={bot.name} src={bot.avatar_url} />
         </div>
+        <div className="content">
+          <div className="header">
+            {bot.name} {BotClassIcon(bot.bot_class)}
+          </div>
 
-        <div className="meta">
-          <small>{bot.catchphrase}</small>
+          <div className="meta">
+            <small>{bot.catchphrase}</small>
+          </div>
         </div>
-      </div>
-      <div className="extra content">
-        <span>
-          <i className="icon heartbeat" />
-          {bot.health}
-        </span>
+        <div className="extra content">
+          <span>
+            <i className="icon heartbeat" />
+            {bot.health}
+          </span>
 
-        <span>
-          <i className="icon lightning" />
-          {bot.damage}
-        </span>
-        <span>
-          <i className="icon shield" />
-          {bot.armor}
-        </span>
-      </div>
+          <span>
+            <i className="icon lightning" />
+            {bot.damage}
+          </span>
+          <span>
+            <i className="icon shield" />
+            {bot.armor}
+          </span>
+        </div>
+      </Link>
     </div>
   );
 }
