@@ -1,6 +1,6 @@
 const Filter = ({ setBotTypeFilter }) => {
     return (
-        <div>
+        <div id="filter">
             <label>Filter Bots:</label>
             <select className="ui dropdown" onChange={(e) => setBotTypeFilter(e.target.value)}>
                 <option value="">--Select Bot Type--</option>

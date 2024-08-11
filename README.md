@@ -39,11 +39,11 @@ Your goal is to meet at least 75% of these requirements to complete the assignme
 - [ x ] Uses `Route` to render a component based on the URL
 - [ x ] Uses `Link` to render a component that redirects the user upon click
 - [ x ] Uses `useParams` to get parts of dynamic URL
-- [ ] Uses `useNavigate` to programmatically redirect the user
+- [ x ] Uses `useNavigate` to programmatically redirect the user
 
 **Miscellaneous**
-- [ ] Props are extracted in child components using destructuring
-- [ ] At no point did you ever use any vanilla DOM JS methods (e.g. `document.querySelector` or `document.createElement`)
+- [ x ] Props are extracted in child components using destructuring
+- [ x ] At no point did you ever use any vanilla DOM JS methods (e.g. `document.querySelector` or `document.createElement`)
 - [ ] Bonus: Your project has some extra CSS styling!
 
 When you are finished, push your code up to Github and submit on Canvas.

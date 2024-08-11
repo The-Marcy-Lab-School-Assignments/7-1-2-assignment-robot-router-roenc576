@@ -5,10 +5,6 @@ import BotCard from './BotCard'
 const BotsList = ({ botTypeFilter }) => {
     const { robots } = useContext(RobotContext)
 
-    // a robot passes the filter if:
-    // - there is no filter OR
-    // - the class matches the filter
-
     return (
         <div className="ui centered cards">
             {

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const BotClassIcon = (bot_class) => {
@@ -13,13 +12,6 @@ const BotClassIcon = (bot_class) => {
       return <div />;
   }
 }
-
-// TODO:
-// - Update the onClick handler such that clicking on a bot card will 
-// navigate the user to /robots/:id where :id is the id of the current bot
-// - Do NOT use a <Link> component to accomplish this
-// USE USENAVIGATE HOOK INSTEAD
-
 
 const BotCard = ({ bot }) => {
 
